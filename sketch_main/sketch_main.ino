@@ -1,3 +1,6 @@
+#include "pins_map.h"
+
+
 void setup() {
   // put your setup code here, to run once:
 
