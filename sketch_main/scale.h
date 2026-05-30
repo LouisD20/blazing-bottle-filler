@@ -23,8 +23,8 @@ const float L_OIL = 820.0; // large 500mL bottle
 
 
 /* Weighing and size detection functions */
-void init_scale();
+int init_scale();
 float weight();
-float avg_weight_over_time(int ms);
+float avg_weight_over_time(int);
 
 #endif

@@ -7,6 +7,9 @@
 
 
 // Motor output
+const int DIR_PIN = 2;
+const int STEP_PIN = 3;
+const int RELEASE_PIN = 4;
 
 // Touchscreen input
 

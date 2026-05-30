@@ -7,15 +7,17 @@
 NAU7802 myScale; // scale object
 
 // initialize scale on startup
-void init_scale() {
+int init_scale() {
   // initialize I2C (for scale readings)
   // uses pins 20 & 21
   Wire.begin();
 
   if (myScale.begin() == false)
   {
-    while (1);
+    return 1; // init failed
   }
+
+  return 0; // init succeeded
 }
 
 // get current weight reading in grams
