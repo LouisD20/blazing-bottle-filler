@@ -15,11 +15,11 @@ void set_pump_dir(SpinDirection spinDir) {
   digitalWrite(DIR_PIN, spinDir);
 }
 
-// complete REVS motor revolutions over MS milliseconds
-void revs_over_time(float revs, int ms) {
+// complete REVS motor revolutions over MICROSECS microseconds
+void revs_over_time(float revs, int microsecs) {
   int stepsPerRev = MOTOR_STEPS * DRIVER_SUBDIVISIONS;
   int stepsNeeded = int(revs * stepsPerRev);
-  int delayPerStep = ms / stepsNeeded;
+  int delayPerStep = microsecs / stepsNeeded;
 
   for(int i=0; i < stepsNeeded; i++) {
     digitalWrite(STEP_PIN, HIGH); 
