@@ -10,8 +10,8 @@ Arduino_GigaDisplayTouch TouchDetector;
 // initialize display on startup
 int init_display() {
   // start connection to display and touchscreen devices
-  Display.begin()
-  TouchDetector.begin()
+  Display.begin();
+  TouchDetector.begin();
 
   // create screenspace object with dimensions matching physical display
   lv_obj_t* screen = lv_obj_create(lv_scr_act());

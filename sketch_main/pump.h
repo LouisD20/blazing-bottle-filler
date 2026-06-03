@@ -9,7 +9,7 @@ typedef enum {
 // # of steps per 1 full revolution, determined by motor construction
 const int MOTOR_STEPS = 200;
 // step subdivision factor, set by physical switch on driver
-const int DRIVER_SUBDIVISIONS = 2;
+const int DRIVER_SUBDIVISIONS = 8;
 
 int init_pump();
 void set_pump_dir(SpinDirection);
