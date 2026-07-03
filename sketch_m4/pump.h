@@ -1,6 +1,12 @@
 #ifndef PUMP_H
 #define PUMP_H
 
+// IO pins used for pump's motor control
+const int DIR_PIN = 8;
+const int STEP_PIN = 9;
+const int RELEASE_PIN = -1;
+
+// directions for motor spinning (clockwise and counterclockwise)
 typedef enum {
   CW  = 0,
   CCW = 1,

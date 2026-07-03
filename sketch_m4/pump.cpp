@@ -1,6 +1,8 @@
-#include "pins_map.h"
-#include "pump.h"
 #include <Arduino.h>
+#include "RPC.h"
+
+//#include "pins_map.h"
+#include "pump.h"
 
 // initialize pump on startup
 int init_pump() {

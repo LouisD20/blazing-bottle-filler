@@ -1,4 +1,4 @@
-#include "pins_map.h"
+//#include "pins_map.h"
 #include "scale.h"
 
 #include <Wire.h>
