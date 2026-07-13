@@ -1,11 +1,9 @@
 #include "RPC.h"
+#include "lvgl.h"
 
 //#include "pins_map.h"
 #include "scale.h"
 #include "display.h"
-
-// thread for sending pump control requests to M4
-Thread pumpThread;
 
 void setup() {
   // put your setup code here, to run once:
@@ -24,11 +22,13 @@ void setup() {
 
 void loop() {
   // put your main code here, to run repeatedly:
+  
+  //RPC.call("set_pump_dir", 0);
+  //RPC.call("revs_over_time", 10, 2000000);
+
+  // send scale reading to screen
+  display_scale_reading(raw_reading());
 
   // update display visuals
   lv_timer_handler();
-  
-  // MUST CHANGE this due to not allowing any other actions while motor is running
-  RPC.call("set_pump_dir", 0);
-  RPC.call("revs_over_time", 10, 2000000);
 }

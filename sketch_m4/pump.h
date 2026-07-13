@@ -1,6 +1,9 @@
 #ifndef PUMP_H
 #define PUMP_H
 
+#include <Arduino.h>
+#include "RPC.h"
+
 // IO pins used for pump's motor control
 const int DIR_PIN = 8;
 const int STEP_PIN = 9;
@@ -18,7 +21,7 @@ const int MOTOR_STEPS = 200;
 const int DRIVER_SUBDIVISIONS = 8;
 
 int init_pump();
-void set_pump_dir(SpinDirection);
+void set_pump_dir(int);
 void revs_over_time(float, int);
 
 #endif

@@ -1,6 +1,9 @@
 #ifndef SCALE_H
 #define SCALE_H
 
+#include <Wire.h>
+#include "SparkFun_Qwiic_Scale_NAU7802_Arduino_Library.h"
+
 // all weights are measured in grams
 
 /* Expected average weights of EMPTY bottles */
@@ -24,6 +27,7 @@ const float L_OIL = 820.0; // large 500mL bottle
 
 /* Weighing and size detection functions */
 int init_scale();
+int32_t raw_reading();
 float weight();
 float avg_weight_over_time(int);
 

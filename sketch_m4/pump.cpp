@@ -13,7 +13,7 @@ int init_pump() {
 }
 
 // set pump's motor spin direction
-void set_pump_dir(SpinDirection spinDir) {
+void set_pump_dir(int spinDir) {
   digitalWrite(DIR_PIN, spinDir);
 }
 
